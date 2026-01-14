@@ -14,6 +14,8 @@ import com.lcsoo.product_management.product.domain.Product;
 import com.lcsoo.product_management.product.dto.AddProductRequest;
 import com.lcsoo.product_management.product.dto.AddProductResponse;
 import com.lcsoo.product_management.product.dto.RemoveProductRequest;
+import com.lcsoo.product_management.product.dto.UpdatePriceRequest;
+import com.lcsoo.product_management.product.dto.UpdatePriceResponse;
 import com.lcsoo.product_management.product.dto.UpdateStockRequest;
 import com.lcsoo.product_management.product.dto.UpdateStockResponse;
 import com.lcsoo.product_management.product.service.ProductService;
@@ -38,9 +40,15 @@ public class ProductController {
         return new ResponseEntity<>(products, HttpStatus.OK);
     }
 
-    @PatchMapping
+    @PatchMapping("/update/stock")
     public ResponseEntity<?> updateStock(@RequestBody UpdateStockRequest request) {
         UpdateStockResponse response = productService.updateStock(request);
+        return new ResponseEntity<>(response.product(), HttpStatus.OK);
+    }
+
+    @PatchMapping("/update/price")
+    public ResponseEntity<?> updatePrice(@RequestBody UpdatePriceRequest request) {
+        UpdatePriceResponse response = productService.updatePrice(request);
         return new ResponseEntity<>(response.product(), HttpStatus.OK);
     }
 

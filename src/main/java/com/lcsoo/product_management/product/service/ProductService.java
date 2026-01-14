@@ -8,6 +8,8 @@ import com.lcsoo.product_management.product.dto.AddProductRequest;
 import com.lcsoo.product_management.product.dto.AddProductResponse;
 import com.lcsoo.product_management.product.dto.RemoveProductRequest;
 import com.lcsoo.product_management.product.dto.StockType;
+import com.lcsoo.product_management.product.dto.UpdatePriceRequest;
+import com.lcsoo.product_management.product.dto.UpdatePriceResponse;
 import com.lcsoo.product_management.product.dto.UpdateStockRequest;
 import com.lcsoo.product_management.product.dto.UpdateStockResponse;
 import com.lcsoo.product_management.product.repository.ProductRepository;
@@ -43,6 +45,16 @@ public class ProductService {
         Product updateProduct = productRepository.save(product);
 
         return new UpdateStockResponse(updateProduct);
+    }
+    
+    /* 제품 가격 수정 */
+    public UpdatePriceResponse updatePrice(UpdatePriceRequest request) {
+        Product product = productRepository.findByName(request.productName()).get();
+        product.setPrice(request.price());
+
+        Product savedProduct = productRepository.save(product);
+
+        return new UpdatePriceResponse(savedProduct);
     }
 
     /* 제품 삭제 */

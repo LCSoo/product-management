@@ -67,6 +67,21 @@ public class ProductApiTest {
     }
 
     @Test
+    void 제품가격_수정_API() throws Exception {
+        ProductSteps.제품등록요청(ProductSteps.제품생성("제품명"), mockMvc);
+
+        var request = ProductSteps.제품가격수정_정보생성("제품명", 2000);
+        
+        var response = ProductSteps.제품가격수정요청(request, mockMvc);
+
+        response
+            .andExpect(status().isOk())
+            .andExpect(jsonPath("name").value("제품명"))
+            .andExpect(jsonPath("price").value(2000))
+            .andExpect(jsonPath("stock").value(1000));
+    }
+
+    @Test
     void 제품정보_삭제_API() throws Exception {
         ProductSteps.제품등록요청(ProductSteps.제품생성("제품명"), mockMvc);
         var request = ProductSteps.제품삭제_정보생성("제품명");

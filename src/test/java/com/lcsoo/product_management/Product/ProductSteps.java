@@ -12,6 +12,7 @@ import org.springframework.test.web.servlet.ResultActions;
 import com.lcsoo.product_management.product.dto.AddProductRequest;
 import com.lcsoo.product_management.product.dto.RemoveProductRequest;
 import com.lcsoo.product_management.product.dto.StockType;
+import com.lcsoo.product_management.product.dto.UpdatePriceRequest;
 import com.lcsoo.product_management.product.dto.UpdateStockRequest;
 import com.lcsoo.product_management.util.JsonUtil;
 
@@ -25,6 +26,10 @@ public class ProductSteps {
     public static UpdateStockRequest 제품수량수정_정보생성(String name) {
         UpdateStockRequest request = new UpdateStockRequest(name, 100, StockType.ADD);
         return request;
+    }
+
+    public static UpdatePriceRequest 제품가격수정_정보생성(String name, Integer price) {
+        return new UpdatePriceRequest(name, price);
     }
 
     public static RemoveProductRequest 제품삭제_정보생성(String name) {
@@ -54,7 +59,7 @@ public class ProductSteps {
     public static ResultActions 제품수량수정요청(UpdateStockRequest request, MockMvc mockMvc) throws Exception {
         return mockMvc
             .perform(
-                patch("/product")
+                patch("/product/update/stock")
                     .contentType(MediaType.APPLICATION_JSON_VALUE)
                     .content(JsonUtil.JSON(request))   
             )
@@ -70,4 +75,16 @@ public class ProductSteps {
             )
             .andDo(print());
     }
+
+    public static ResultActions 제품가격수정요청(UpdatePriceRequest request, MockMvc mockMvc) throws Exception {
+        return mockMvc
+            .perform(
+                patch("/product/update/price")
+                    .contentType(MediaType.APPLICATION_JSON_VALUE)
+                    .content(JsonUtil.JSON(request))
+            )
+            .andDo(print());
+    }
+
+    
 }
