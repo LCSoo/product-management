@@ -1,4 +1,4 @@
-package com.lcsoo.product_management.Product;
+package com.lcsoo.product_management.product;
 
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
@@ -31,8 +31,6 @@ public class ProductApiTest {
             .andExpect(jsonPath("name").value("제품명"))
             .andExpect(jsonPath("price").value(1000))
             .andExpect(jsonPath("amount").value(1000));
-
-        System.out.println("[res] = "+response.andReturn().getResponse().getContentAsString());
     }
 
     @Test

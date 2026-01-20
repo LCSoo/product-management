@@ -1,4 +1,4 @@
-package com.lcsoo.product_management.Product;
+package com.lcsoo.product_management.product;
 
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.delete;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;

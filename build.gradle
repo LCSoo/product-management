@@ -43,3 +43,8 @@ dependencies {
 tasks.named('test') {
 	useJUnitPlatform()
 }
+
+test {
+    // Mockito 에이전트를 JVM 아규먼트로 추가
+    jvmArgs("-XX:+EnableDynamicAgentLoading", "-Djdk.instrument.traceUsage")
+}
