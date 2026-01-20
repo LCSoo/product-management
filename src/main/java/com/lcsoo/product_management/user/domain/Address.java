@@ -1,4 +1,4 @@
-package com.lcsoo.product_management.user;
+package com.lcsoo.product_management.user.domain;
 
 import java.util.Map;
 import java.util.Optional;

@@ -1,4 +1,4 @@
-package com.lcsoo.product_management.user;
+package com.lcsoo.product_management.user.dto;
 
 import java.util.Map;
 import org.springframework.util.Assert;

@@ -7,12 +7,12 @@ import com.lcsoo.product_management.product.domain.Product;
 import com.lcsoo.product_management.product.dto.AddProductRequest;
 import com.lcsoo.product_management.product.dto.AddProductResponse;
 import com.lcsoo.product_management.product.dto.RemoveProductRequest;
-import com.lcsoo.product_management.product.dto.StockType;
 import com.lcsoo.product_management.product.dto.UpdatePriceRequest;
 import com.lcsoo.product_management.product.dto.UpdatePriceResponse;
 import com.lcsoo.product_management.product.dto.UpdateStockRequest;
 import com.lcsoo.product_management.product.dto.UpdateStockResponse;
 import com.lcsoo.product_management.product.repository.ProductRepository;
+import com.lcsoo.product_management.type.StockType;
 
 @Service
 

@@ -1,6 +1,7 @@
-package com.lcsoo.product_management.user;
+package com.lcsoo.product_management.user.dto;
 
 import org.springframework.util.Assert;
+import com.lcsoo.product_management.type.UserRole;
 
 public record DeleteUserRequest(String name, UserRole role) {
 

@@ -1,7 +1,14 @@
-package com.lcsoo.product_management.user;
+package com.lcsoo.product_management.user.service;
 
 import java.util.Map;
 import org.springframework.stereotype.Service;
+import com.lcsoo.product_management.user.domain.User;
+import com.lcsoo.product_management.user.dto.AddUserRequest;
+import com.lcsoo.product_management.user.dto.AddUserResponse;
+import com.lcsoo.product_management.user.dto.DeleteUserRequest;
+import com.lcsoo.product_management.user.dto.UpdateUserRequest;
+import com.lcsoo.product_management.user.dto.UserResponse;
+import com.lcsoo.product_management.user.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 
 @Service
@@ -56,7 +63,7 @@ public class UserService {
         if (user == null) {
             throw new IllegalArgumentException("유저 정보 삭제 실패 - 유저 정보가 없습니다.");
         } 
-        
+
         userRepository.delete(user);
 
         return new UserResponse(Map.of(

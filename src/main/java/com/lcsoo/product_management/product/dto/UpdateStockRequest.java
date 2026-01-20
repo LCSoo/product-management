@@ -1,6 +1,7 @@
 package com.lcsoo.product_management.product.dto;
 
 import org.springframework.util.Assert;
+import com.lcsoo.product_management.type.StockType;
 
 public record UpdateStockRequest(
     String productName,

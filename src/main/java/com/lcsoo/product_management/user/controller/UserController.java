@@ -1,4 +1,4 @@
-package com.lcsoo.product_management.user;
+package com.lcsoo.product_management.user.controller;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -10,6 +10,12 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+import com.lcsoo.product_management.user.dto.AddUserRequest;
+import com.lcsoo.product_management.user.dto.AddUserResponse;
+import com.lcsoo.product_management.user.dto.DeleteUserRequest;
+import com.lcsoo.product_management.user.dto.UpdateUserRequest;
+import com.lcsoo.product_management.user.dto.UserResponse;
+import com.lcsoo.product_management.user.service.UserService;
 import lombok.RequiredArgsConstructor;
 
 

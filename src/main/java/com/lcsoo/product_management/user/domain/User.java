@@ -1,8 +1,9 @@
-package com.lcsoo.product_management.user;
+package com.lcsoo.product_management.user.domain;
 
 import java.util.Optional;
 import java.util.UUID;
 import org.springframework.util.Assert;
+import com.lcsoo.product_management.type.UserRole;
 import jakarta.persistence.Column;
 import jakarta.persistence.Embedded;
 import jakarta.persistence.Entity;

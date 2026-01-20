@@ -1,4 +1,4 @@
-package com.lcsoo.product_management.user;
+package com.lcsoo.product_management.type;
 
 public enum UserRole {
     USER,

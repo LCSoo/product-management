@@ -8,6 +8,8 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.webmvc.test.autoconfigure.AutoConfigureMockMvc;
 import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.web.servlet.MockMvc;
+import com.lcsoo.product_management.type.UserRole;
+import com.lcsoo.product_management.user.service.UserService;
 
 @SpringBootTest
 @AutoConfigureMockMvc
