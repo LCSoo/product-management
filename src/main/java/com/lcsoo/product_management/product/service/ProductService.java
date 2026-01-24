@@ -64,5 +64,10 @@ public class ProductService {
     }
   
 
+    /* 제품 이름으로 조회 */
+    public ProductResponse getProductsByNameIn(List<String> names) {
+        List<Product> products = productRepository.findByNameIn(names);
+        return new ProductResponse(products);
+    }
      
 }

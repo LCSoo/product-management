@@ -28,6 +28,7 @@ import lombok.NoArgsConstructor;
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
+    @Column(name = "id")
     private UUID id;
 
     @Column(name="email")
@@ -46,6 +47,9 @@ public class User {
 
     @Embedded
     private Address address;
+
+
+
 
     /* 생성자 */
     public User(String email, String password, String name, Address address) {

@@ -34,6 +34,7 @@ public class UserService {
         User user = userRepository.findByName(username).get();
 
         UserResponse response = new UserResponse(Map.of(
+            "id", user.getId(),
             "email", user.getEmail(),
             "name", user.getName(),
             "address", user.getAddress().toMap()
