@@ -8,6 +8,7 @@ import java.util.UUID;
 import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.ResultActions;
+import com.lcsoo.product_management.domain.order.dto.OrderItemRequest;
 import com.lcsoo.product_management.util.JsonUtil;
 
 public class OrderSteps {

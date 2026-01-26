@@ -9,11 +9,12 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.webmvc.test.autoconfigure.AutoConfigureMockMvc;
 import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.web.servlet.MockMvc;
+import com.lcsoo.product_management.domain.order.service.OrderService;
+import com.lcsoo.product_management.domain.product.repository.ProductRepository;
+import com.lcsoo.product_management.domain.user.domain.User;
+import com.lcsoo.product_management.domain.user.repository.UserRepository;
 import com.lcsoo.product_management.product.ProductSteps;
-import com.lcsoo.product_management.product.repository.ProductRepository;
 import com.lcsoo.product_management.user.UserSteps;
-import com.lcsoo.product_management.user.domain.User;
-import com.lcsoo.product_management.user.repository.UserRepository;
 
 @SpringBootTest
 @AutoConfigureMockMvc

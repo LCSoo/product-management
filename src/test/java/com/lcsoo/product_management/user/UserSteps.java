@@ -9,11 +9,11 @@ import org.springframework.boot.webmvc.test.autoconfigure.AutoConfigureMockMvc;
 import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.ResultActions;
+import com.lcsoo.product_management.domain.user.domain.Address;
+import com.lcsoo.product_management.domain.user.dto.AddUserRequest;
+import com.lcsoo.product_management.domain.user.dto.DeleteUserRequest;
+import com.lcsoo.product_management.domain.user.dto.UpdateUserRequest;
 import com.lcsoo.product_management.type.UserRole;
-import com.lcsoo.product_management.user.domain.Address;
-import com.lcsoo.product_management.user.dto.AddUserRequest;
-import com.lcsoo.product_management.user.dto.DeleteUserRequest;
-import com.lcsoo.product_management.user.dto.UpdateUserRequest;
 import com.lcsoo.product_management.util.JsonUtil;
 
 @AutoConfigureMockMvc

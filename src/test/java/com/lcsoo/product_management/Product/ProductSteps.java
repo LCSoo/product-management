@@ -9,10 +9,10 @@ import org.springframework.boot.webmvc.test.autoconfigure.AutoConfigureMockMvc;
 import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.ResultActions;
-import com.lcsoo.product_management.product.dto.AddProductRequest;
-import com.lcsoo.product_management.product.dto.RemoveProductRequest;
-import com.lcsoo.product_management.product.dto.UpdatePriceRequest;
-import com.lcsoo.product_management.product.dto.UpdateStockRequest;
+import com.lcsoo.product_management.domain.product.dto.AddProductRequest;
+import com.lcsoo.product_management.domain.product.dto.RemoveProductRequest;
+import com.lcsoo.product_management.domain.product.dto.UpdatePriceRequest;
+import com.lcsoo.product_management.domain.product.dto.UpdateStockRequest;
 import com.lcsoo.product_management.type.StockType;
 import com.lcsoo.product_management.util.JsonUtil;
 
